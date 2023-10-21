@@ -2,6 +2,10 @@ body {
     font-family: Arial, sans-serif;
     background-color: #e9e3e3;
     margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .calculator-container {
@@ -46,7 +50,6 @@ input {
     text-align: right;
     padding: 0 10px;
 }
-
 
 .memory-buttons {
     display: flex;
@@ -93,27 +96,25 @@ button:hover {
     background-color: #ccc;
     padding: 10px;
     width: 30%; /* Adjust the width as needed */
+    display: none; /* Initially hidden */
 }
 
-/* Rest of your styles... */
-.history-section {
-    margin-bottom: 10px;
+/* Show side panel and hide history icon on larger screens */
+@media ( min-width: 769px) {
+    .side-panel {
+        display: block;
+    }
+    .history-icon {
+        display: none;
+    }
 }
 
-.section-title {
-    font-weight: bold;
-    font-size: 18px;
-    margin-bottom: 5px;
-    float: left;
-    width: 50%;
-}
-
-.section-content {
-    font-size: 16px;
-}
-
-.memory-section {
-    margin-top: 10px;
-    border-top: 1px solid #ccc;
-    padding-top: 10px;
+/* Show history icon on smaller screens */
+@media (max-width: 768px) {
+    .history-icon {
+        display: block;
+    }
+    .side-panel {
+        display: none;
+    }
 }
