@@ -1,21 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Windows 10 Calculator</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-    <div class="calculator-container">
-    <div class="calculator ">
-        Calculator
-        <div class="main-content">
-            <!--history icon-->
-          <div class="history-icon">
-            <img  src="bx-history.svg" alt="History" width="30" > 
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="windows-10-calculator">
+       <!-- all parts except for nav bar-->
+      <div class="calculator">
+                                       <!--navigation bar part-->
+        <div class="nav-bar">
+          <div class="nav-bar-calc">calculator</div>
+            <div class="nav_header">
+              <div class="nav-button">–</div>
+              <div class="nav-button">▢</div>
+              <div class="nav-exit-button">✕</div>
+            </div>
         </div>
-        <div class="display">
+                  <!--standard part: important part is to remember add space between, margin, float and flex-->
+        
+          <div class="standard">
+            <img src="hambergar.png" class="standard-img1">
+            <div class="standard-content"> Standard </div>
+            <img src="standard (1).svg" class="standard-img2">
+            <img  src="bx-history.svg" class="standard-img3" alt="History" width="30" >
+          </div>
+          
+                               <!--chack the id and class for display 0 -->
+          <div class="display">
             <input type="text" id="display" value="0">
         </div>
+
+                            <!--memorry-buttons, top row-->
         <div class="memory-buttons">
             <button style="color: rgb(165, 164, 164);">MC</button>
             <button style="color:rgb(165, 164, 164)">MR</button>
@@ -23,8 +39,11 @@
             <button>M-</button>
             <button>MS</button>
             <button style="color:rgb(165, 164, 164)">M*</button>
-        </div>
-        <div class="buttons">
+          </div>
+
+                           <!--calc buttons-->
+
+          <div class="buttons">
             <button class="operator">%</button>
             <button class="operator">r</button>
             <button class="operator">x^2</button>
@@ -50,19 +69,19 @@
             <button class="operator">.</button>
             <button class="operator">=</button>
         </div>
-    </div>
-</div>
-        <div class="side-panel">
-            <div class="history-section">
-                <div class="section-title">History</div>
-                <div class="section-title">Memory</div>
-            </div>
-            
-            <div class="memory-section">
-                <div class="section-content">There is no history yet</div>
-            </div>
+      </div>
+
+      <div class="side-panel">
+        <div class="history-section">
+            <div class="section-title" style="float: left;  ">History</div>
+            <div class="section-title" >Memory</div>
         </div>
-          
-    </div>
-</body>
+        
+        <div class="memory-section">
+            <div class="section-content">There is no history yet</div>
+        </div>
+      </div>
+  
+  </div>
+  </body>
 </html>
