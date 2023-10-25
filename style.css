@@ -1,195 +1,250 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #e9e3e3;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #e9e3e3;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-.windows-10-calculator{
-    background-color: #ccc;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    width: 70%; /* Adjust the width as needed */
-    margin: 0;
-    resize: both;
-    overflow: auto;
+.windows-10-calculator {
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 70%; /* Adjust the width as needed */
+  margin: 0;
+  resize: both;
+  overflow: auto;
 }
-                   /* naviation bar style*/
-.nav-bar{
-    display: flex;
-    height: 28px;
-    justify-content: space-between;
+/* naviation bar style*/
+.nav-bar {
+  display: flex;
+  height: 28px;
+  justify-content: space-between;
 }
-.nav-bar-calc{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: sans-serif;
-    font-size: 16px;
-    margin-top: 5px;
-    padding-left: 12px;
-    
+.nav-bar-calc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: 16px;
+  margin-top: 5px;
+  padding-left: 12px;
 }
 
-.nav_header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.9rem;
-    font-family: sans-serif;
+.nav_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-family: sans-serif;
 }
 .nav-button {
-    display: flex;
-    width: 44px;
-    height: 28px;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  width: 44px;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
 }
 
-.nav-exit-button{
-    display: flex;
-    width: 30px;
-    height: 28px;
-    align-items: center;
-    justify-content: center;
+.nav-exit-button {
+  display: flex;
+  width: 30px;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
 }
-.nav-button:hover{
-    background-color:rgb(188,188,188);
-
+.nav-button:hover {
+  background-color: rgb(188, 188, 188);
 }
-.nav-exit-button:hover{
-    background-color:rgb(216,60,60);
-    color: white;
-}
-
-                      /* standard style*/
-.standard{
-    display: flex;
-    align-items: right;
-    height: 23px;
-    padding-left: 12px;
-    padding-top: 10px;
-    font-size: 20px;
-    
-}
-.standard-content{
-    padding-left: 12px;
-}
-.standard-img1{
-    height: 20px;
-    padding-right: 10px;
-}
-.standard-img2{
-height: 30px;
-padding-left: 13px;
-}
-.standard-img3{
-    flex: 3;
-    height: 25px;
+.nav-exit-button:hover {
+  background-color: rgb(216, 60, 60);
+  color: white;
 }
 
-              /* input and output display style*/
-  
+/* standard style*/
+.standard {
+  display: flex;
+  align-items: right;
+  height: 23px;
+  padding-left: 12px;
+  padding-top: 10px;
+  font-size: 20px;
+}
+.standard-content {
+  padding-left: 12px;
+}
+.standard-img1 {
+  height: 20px;
+  padding-right: 10px;
+}
+.standard-img2 {
+  height: 30px;
+  padding-left: 13px;
+}
+.standard-img3 {
+  flex: 3;
+  height: 25px;
+}
+
+/* input and output display style*/
+
 .display {
-    background-color: #ccc;
-    color: #000;
-    padding: 10px;
-    text-align: left;
-    font-size: 100px;
+  background-color: #ccc;
+  color: #000;
+  padding: 10px;
+  text-align: left;
+  font-size: 100px;
+  font-weight: bolder;
 }
-            
+
 input {
-    border: none;
-    background-color:#ccc;
-    width: 60%;
-    font-size: 24px;
-    color: #000;
-    text-align: right;
-    padding: 0 10px;
+  border: none;
+  background-color: #ccc;
+  width: 60%;
+  font-size: 24px;
+  color: #000;
+  text-align: right;
+  padding: 0 10px;
+}
+
+/* mempry buttons on top row style*/
+
+.memory-buttons {
+  display: block;
+  justify-content: space-between;
+
+
+}
+
+.memory-buttons button {
+  border: 1px solid #ccc;
+  background-color: #ccc;
+  color: #000;
+  text-align: center;
+  font-size: small;
+  padding: 10px;
+  cursor:pointer;
+}
+
+/* calculator buttons*/
+
+.calculator {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  gap: 1px;
+}
+
+.number-buttons{
+  color: rgb(41, 38, 38);
+  font-weight: bold;
+  font-size: medium;
+}
+.operator1, .operator{
+  background-color: rgb(225, 218, 218);
+  font-size: 16px;
 }
 
 
-          /* mempry buttons on top row style*/
+button {
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  color: #000;
+  padding: 0;
+  cursor: pointer;
+}
 
-          .memory-buttons {
-            display: flex;
-            justify-content: space-between;
-        }
-        
-        .memory-buttons button {
-            border: 1px solid #ccc;
-            background-color: #ccc;
-            color: #000;
-            text-align: center;
-            font-size: small;
-            padding: 10px;
-            cursor:col-resize;
-        }
+button.buttons {
+  background-color: #dcdada;
+  color:rgb(66, 66, 66);
+}
 
-                     /* calculator buttons*/
 
-                     .calculator {
-                        flex: 2;
-                        display: flex;
-                        flex-direction: column;
-                    }
-
- .buttons {
-                        display: grid;
-                        grid-template-columns: repeat(4, 1fr);
-                        width: 100%;
-                        height: 100%;
-                        flex: 1;
-                        gap: 1px;
-                    }
-                    
-                    button {
-                        border: 1px solid #ccc;
-                        background-color: #f0f0f0;
-                        color: #000;
-                        font-size: 20px;
-                        padding: 0;
-                        cursor: pointer;
-                    }
-                    
-button.operator {
-                        background-color: #dcdada;
-                    }
-                    
 button:hover {
-                        background-color: #ccc;
-                    }
+  background-color: #ccc;
+}
+
+.button-x{
+  display: none;
+}
 /* side pannel*/
 
 .side-panel {
-    background-color: #ccc;
-    padding: 10px;
-    width: 30%; /* Adjust the width as needed */
-    display: none; /* Initially hidden */
+  background-color: #ccc;
+  padding: 10px;
+  width: 30%; /* Adjust the width as needed */
+  display: none; /* Initially hidden */
 }
-
 
 /* Show side panel and hide history icon on larger screens */
-@media ( min-width: 769px) {
-    .side-panel {
-        display: block;
-    }
-    .standard-img3 {
-        display: none;
-    }
+@media (min-width: 769px) {
+  .side-panel {
+    display: block;
+  }
+  .standard-img3 {
+    display: none;
+  }
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 5px;
+  }
+  
+  .operator1:nth-child(1) { grid-row: 1; grid-column: 1; }
+  .operator1:nth-child(2) { grid-row: 2; grid-column: 1; }
+  .operator1:nth-child(3) { grid-row: 3; grid-column: 1; }
+  .operator1:nth-child(4) { grid-row: 5; grid-column: 1; }
+  .operator:nth-child(5) { grid-row: 1; grid-column: 2; }
+  .operator:nth-child(6) { grid-row: 1; grid-column: 3; }
+  .operator:nth-child(7) { grid-row: 1; grid-column: 4; }
+  .operator:nth-child(8) { grid-row: 1; grid-column: 5; }
+  .number-buttons:nth-child(9) { grid-row: 2; grid-column: 2; }
+  .number-buttons:nth-child(10) { grid-row: 2; grid-column: 3; }
+  .number-buttons:nth-child(11) { grid-row: 2; grid-column: 4; }
+  .operator:nth-child(12) { grid-row: 2; grid-column: 5; }
+  .number-buttons:nth-child(13) { grid-row: 3; grid-column: 2; }
+  .number-buttons:nth-child(14) { grid-row: 3; grid-column: 3; }
+  .number-buttons:nth-child(15) { grid-row: 3; grid-column: 4; }
+  .operator:nth-child(16) { grid-row: 3; grid-column: 5; }
+  .number-buttons:nth-child(17) { grid-row: 4; grid-column: 2; }
+  .number-buttons:nth-child(18) { grid-row: 4; grid-column: 3; }
+  .number-buttons:nth-child(19) { grid-row: 4; grid-column: 4; }
+  .operator:nth-child(20) { grid-row: 4; grid-column: 5; }
+  .operator:nth-child(21) { grid-row: 5; grid-column: 2; }
+  .number-buttons:nth-child(22) { grid-row: 5; grid-column: 3; }
+  .operator:nth-child(23) { grid-row: 5; grid-column: 4; }
+  .operator:nth-child(24) { grid-row: 5; grid-column: 5; }
+  
 }
-
+.button-x {
+  grid-row: 4;
+  grid-column: 1;
+  display: grid;
+  /* Add any additional styles for this button here */
+}
 /* Show history icon on smaller screens */
 @media (max-width: 768px) {
-    .history-icon {
-        display: block;
-    }
-    .side-panel {
-        display: none;
-    }
-}
+  .history-icon {
+    display: block;
+  }
+  .side-panel {
+    display: none;
+  }
+  .button-x {
+    display: none;
+  }
+  }
+
