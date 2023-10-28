@@ -19,6 +19,7 @@ body {
   resize: both;
   overflow: auto;
 }
+
 /* naviation bar style*/
 .nav-bar {
   display: flex;
@@ -91,7 +92,6 @@ body {
 }
 
 /* input and output display style*/
-
 .display {
   background-color: #ccc;
   color: #000;
@@ -112,12 +112,9 @@ input {
 }
 
 /* mempry buttons on top row style*/
-
 .memory-buttons {
   display: block;
   justify-content: space-between;
-
-
 }
 
 .memory-buttons button {
@@ -150,11 +147,14 @@ input {
 .number-buttons{
   color: rgb(41, 38, 38);
   font-weight: bold;
-  font-size: medium;
+  font-size: 20px;
 }
 .operator1, .operator{
   background-color: rgb(225, 218, 218);
   font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -185,7 +185,20 @@ button:hover {
   background-color: #ccc;
   padding: 10px;
   width: 30%; /* Adjust the width as needed */
-  display: none; /* Initially hidden */
+  display: flex; /* Initially hidden */
+  flex-direction: column;
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 5px;
+  margin-right: 5px; /* Add margin-right to create space */
+ 
+}
+
+.section-content {
+  font-size: 16px;
 }
 
 /* Show side panel and hide history icon on larger screens */
