@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: #e9e3e3;
   margin: 0;
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -22,12 +22,10 @@ body {
 
 /* naviation bar style*/
 .nav-bar {
-  
-  display: grid;
+  display: flex;
   height: 28px;
   justify-content: space-between;
-  grid-template-columns: 1fr 1fr;
-
+  flex-direction: row;
 }
 .nav-bar-calc {
   display: flex;
@@ -41,11 +39,13 @@ body {
 
 .nav_header {
   display: flex;
-  align-items: center;
+  align-items: right;
   justify-content: right;
   font-size: 0.9rem;
   font-family: sans-serif;
- margin-right: 10px;
+   margin-right: 10px;
+ 
+
 }
 .nav-button {
   display: flex;
@@ -225,6 +225,7 @@ button:hover {
     grid-template-rows: 1fr 1fr 15fr;
 
   }
+
   .standard-img3 {
     display: none;
   }
