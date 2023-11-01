@@ -6,20 +6,19 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  
+  width: 100%;
 }
 .windows-10-calculator {
   background-color: #ccc;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  /* border: 1px solid #ccc; */
   display: grid;
   grid-template-columns: 4fr 1.3fr;
   grid-template-rows: 0.5fr 15fr;
   align-items: stretch;
-  width: 70%; /* Adjust the width as needed */
-  margin: 0;
-  resize: both;
+  /* resize: both; */
   overflow: auto;
+  width: 100vw;
+  height: 100vh;
 }
 
 /* naviation bar style*/
@@ -143,6 +142,13 @@ input {
   color: #000;
   text-align: right;
   padding: 0 10px;
+}
+
+/* https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 /* mempry buttons on top row style*/
