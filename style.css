@@ -6,13 +6,15 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  
 }
 .windows-10-calculator {
   background-color: #ccc;
   border: 1px solid #ccc;
   border-radius: 5px;
   display: grid;
-  grid-template-columns: 4.25fr 2fr;
+  grid-template-columns: 4fr 1.3fr;
+  grid-template-rows: 0.5fr 15fr;
   align-items: stretch;
   width: 70%; /* Adjust the width as needed */
   margin: 0;
@@ -26,6 +28,7 @@ body {
   height: 28px;
   justify-content: space-between;
   flex-direction: row;
+
 }
 .nav-bar-calc {
   display: flex;
@@ -44,6 +47,7 @@ body {
   font-size: 0.9rem;
   font-family: sans-serif;
    margin-right: 10px;
+
  
 
 }
@@ -70,8 +74,34 @@ body {
   color: white;
 }
 
+
+.nav-button1 {
+  display: flex;
+  width: 44px;
+  height: 28px;
+  align-items: right;
+  justify-content: right;
+}
+
+.nav-exit-button1 {
+  display: flex;
+  width: 30px;
+  height: 28px;
+  align-items: right;
+  justify-content: right;
+}
+.nav-button1:hover {
+  background-color: rgb(188, 188, 188);
+}
+.nav-exit-button1:hover {
+  background-color: rgb(216, 60, 60);
+  color: white;
+}
+
+
 /* standard style*/
 .standard {
+  grid-area:2 / 1 / span 2 / span 2 ;
   display: flex;
   align-items: right;
   height: 23px;
@@ -117,6 +147,7 @@ input {
 
 /* mempry buttons on top row style*/
 .memory-buttons {
+  
   display: block;
   justify-content: space-between;
 }
@@ -134,9 +165,11 @@ input {
 /* calculator buttons*/
 
 .calculator {
+  grid-area: 2 / 1 / span 2 / 2;
   flex: 2;
   display: flex;
   flex-direction: column;
+  
 }
 
 .buttons {
@@ -186,12 +219,11 @@ button:hover {
 /* side pannel*/
 
 .side-panel {
+  grid-area:  2 / 2 / 2 / span 2;
   background-color: #ccc;
   padding: 10px;
   width: 30%; /* Adjust the width as needed */
   display: grid; /* Initially hidden */
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 15fr;
 }
 
 .section-title {
@@ -218,8 +250,24 @@ button:hover {
 
 /* Show side panel and hide history icon on larger screens */
 @media (min-width: 769px) {
- 
+
+ .windows-10-calculator{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 15fr;
+ }
+ .calculator{
+  grid-area: 2 / 1 / span 2 / 2;
+ }
+.nav-bar{
+  grid-area: 1 / 1 / 2 / span 2 ;
+
+}
+
+   
   .side-panel {
+    grid-row-start: 2;
+    grid-column-start: 2;
     display: grid;
     grid-template-columns: 1fr 1fr ;
     grid-template-rows: 1fr 1fr 15fr;
@@ -261,14 +309,13 @@ button:hover {
   .number-buttons:nth-child(22) { grid-row: 5; grid-column: 3; }
   .operator:nth-child(23) { grid-row: 5; grid-column: 4; }
   .operator:nth-child(24) { grid-row: 5; grid-column: 5; }
-  
+
 .button-x {
   grid-row: 4;
   grid-column: 1;
   display: grid;
   /* Add any additional styles for this button here */
 }
-
 }
 /* Show history icon on smaller screens */
 @media (max-width: 768px) {
